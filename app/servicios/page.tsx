@@ -19,7 +19,7 @@ export default function ServiciosPage() {
         "Planos arquitectónicos detallados",
         "Integración de tecnologías sostenibles",
       ],
-      image: "/placeholder.svg?height=600&width=600&text=Diseño+Arquitectónico",
+      image: "../../1.jpg",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export default function ServiciosPage() {
         "Integración de áreas verdes",
         "Estrategias de desarrollo sostenible",
       ],
-      image: "/placeholder.svg?height=600&width=600&text=Planificación+Urbana",
+      image: "../../00001 (2).jpg",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function ServiciosPage() {
         "Actualización de instalaciones",
         "Preservación de elementos históricos",
       ],
-      image: "/placeholder.svg?height=600&width=600&text=Renovación",
+      image: "../../04.jpg",
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ export default function ServiciosPage() {
         "Consultoría en sostenibilidad",
         "Gestión de proyectos arquitectónicos",
       ],
-      image: "/placeholder.svg?height=600&width=600&text=Consultoría",
+      image: "../../Fachada+VIVIENDACORDERO (1).jpg",
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ export default function ServiciosPage() {
         "Iluminación arquitectónica",
         "Integración de tecnología smart home",
       ],
-      image: "/placeholder.svg?height=600&width=600&text=Diseño+Interior",
+      image: "../../H02 (2).jpg",
     },
     {
       id: 6,
@@ -85,7 +85,7 @@ export default function ServiciosPage() {
         "Selección de materiales sostenibles",
         "Certificaciones ambientales (LEED, BREEAM)",
       ],
-      image: "/placeholder.svg?height=600&width=600&text=Arquitectura+Sostenible",
+      image: "../../HHHH.jpg",
     },
   ]
 

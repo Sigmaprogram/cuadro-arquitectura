@@ -8,29 +8,25 @@ export default function SobreNosotrosPage() {
   // Datos de ejemplo para el equipo
   const equipo = [
     {
-      name: "Carlos Rodríguez",
-      position: "Arquitecto Principal",
-      bio: "Fundador de Cuadro Arquitectura con más de 15 años de experiencia en diseño futurista y sostenible.",
-      image: "/placeholder.svg?height=400&width=400&text=Carlos+Rodríguez",
+      name: "Javier Batista",
+      position: "Gerente General",
+      image: "../../FOTO+JAVIER.jpg",
     },
     {
-      name: "María Fernández",
-      position: "Directora de Diseño",
-      bio: "Especialista en diseño paramétrico y geometrías complejas con enfoque en la funcionalidad espacial.",
-      image: "/placeholder.svg?height=400&width=400&text=María+Fernández",
+      name: "Fernando Cordero",
+      position: "Director de Arquitectura",
+      image: "../../FOTO+FERNANDO.jpg",
     },
     {
-      name: "Juan Pérez",
-      position: "Arquitecto Urbano",
-      bio: "Experto en planificación urbana con visión para transformar espacios públicos en San Pedro de Macorís.",
-      image: "/placeholder.svg?height=400&width=400&text=Juan+Pérez",
+      name: "Michael Jimenez",
+      position: "Gerente de Ingenieria",
+      image: "../../FOTO+MICHAEL.jpg",
     },
     {
-      name: "Ana Martínez",
-      position: "Diseñadora de Interiores",
-      bio: "Creadora de espacios interiores que combinan estética futurista con funcionalidad y confort.",
-      image: "/placeholder.svg?height=400&width=400&text=Ana+Martínez",
-    },
+      name: "Maite Adames",
+      position: "Encargada de Taller",
+      image: "../../MaiteAdames.png",
+    }
   ]
 
   return (
@@ -47,7 +43,7 @@ export default function SobreNosotrosPage() {
             <div className="relative">
               <div className="relative h-[500px] overflow-hidden border border-white/20 p-2">
                 <Image
-                  src="/placeholder.svg?height=600&width=600&text=Cuadro+Arquitectura"
+                  src="../../00.jpg"
                   alt="Cuadro Arquitectura"
                   width={600}
                   height={600}
@@ -150,19 +146,18 @@ export default function SobreNosotrosPage() {
                 key={miembro.name}
                 className="group overflow-hidden border border-white/20 bg-white/5 backdrop-blur-sm"
               >
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative h-[300px] w-[300px] overflow-hidden">
                   <Image
                     src={miembro.image || "/placeholder.svg"}
                     alt={miembro.name}
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="border-t border-white/20 p-6">
                   <h3 className="text-xl font-bold">{miembro.name}</h3>
                   <p className="text-white/60">{miembro.position}</p>
-                  <p className="mt-2 text-white/70">{miembro.bio}</p>
                 </div>
               </div>
             ))}
@@ -257,7 +252,7 @@ export default function SobreNosotrosPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square overflow-hidden border border-white/20 p-2">
                 <Image
-                  src="/placeholder.svg?height=400&width=400&text=Visión"
+                  src="../../R01.jpg"
                   alt="Visión"
                   width={400}
                   height={400}
@@ -266,7 +261,7 @@ export default function SobreNosotrosPage() {
               </div>
               <div className="aspect-square overflow-hidden border border-white/20 p-2">
                 <Image
-                  src="/placeholder.svg?height=400&width=400&text=Futuro"
+                  src="../../R05 (2).jpg"
                   alt="Futuro"
                   width={400}
                   height={400}
@@ -275,7 +270,7 @@ export default function SobreNosotrosPage() {
               </div>
               <div className="aspect-square overflow-hidden border border-white/20 p-2">
                 <Image
-                  src="/placeholder.svg?height=400&width=400&text=Innovación"
+                  src="../../R0 (1).jpg"
                   alt="Innovación"
                   width={400}
                   height={400}
@@ -284,7 +279,7 @@ export default function SobreNosotrosPage() {
               </div>
               <div className="aspect-square overflow-hidden border border-white/20 p-2">
                 <Image
-                  src="/placeholder.svg?height=400&width=400&text=Transformación"
+                  src="../../HABITAT+01.jpg"
                   alt="Transformación"
                   width={400}
                   height={400}

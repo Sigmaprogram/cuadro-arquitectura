@@ -19,8 +19,8 @@ export default function Home() {
         <div className="container relative z-10 px-4 py-24 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12">
             <div className="flex flex-col justify-center space-y-6">
-              <div className="inline-block border-2 border-white p-1">
-                <span className="bg-white px-3 py-1 text-xs text-black">INNOVACIÓN ARQUITECTÓNICA</span>
+              <div className="border-2 border-white p-1">
+                <span className="bg-white px-3 py-1 text-xs text-black flex">INNOVACIÓN ARQUITECTÓNICA</span>
               </div>
               <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
                 Transformando <br />
@@ -52,7 +52,7 @@ export default function Home() {
               <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-4">
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="../../00001.jpg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
@@ -61,7 +61,7 @@ export default function Home() {
                 </div>
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="../../01+(2) (1).jpeg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
@@ -70,7 +70,7 @@ export default function Home() {
                 </div>
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="../../R2.jpg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
@@ -79,7 +79,7 @@ export default function Home() {
                 </div>
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="../../00.jpg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
@@ -224,7 +224,7 @@ export default function Home() {
             <div className="relative h-[400px] md:h-auto">
               <div className="absolute left-0 top-0 h-full w-full border border-black/10 bg-black/5 p-3">
                 <Image
-                  src="/placeholder.svg?height=600&width=600&text=Cuadro+Arquitectura"
+                  src="../../2.jpg"
                   alt="Sobre Nosotros"
                   width={600}
                   height={600}
@@ -235,7 +235,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center">
               <div className="inline-block border-2 border-black p-1">
-                <span className="bg-black px-3 py-1 text-xs text-white">NUESTRA MISIÓN</span>
+                <span className="bg-black px-3 py-1 text-xs text-white flex">NUESTRA MISIÓN</span>
               </div>
               <h2 className="mt-6 text-3xl font-bold md:text-4xl">Transformando espacios, creando futuro</h2>
               <div className="mt-6 space-y-4 text-black/70">
