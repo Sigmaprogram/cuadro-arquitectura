@@ -1,94 +1,11 @@
-import { Check, ChevronRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { Check, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import PageHeader from "@/components/page-header"
+import PageHeader from "@/components/page-header";
+import { servicios } from "@/lib/data";
 
 export default function ServiciosPage() {
-  // Datos de ejemplo para servicios
-  const servicios = [
-    {
-      id: 1,
-      title: "Diseño Arquitectónico",
-      description:
-        "Creamos diseños vanguardistas que combinan estética y funcionalidad para todo tipo de edificaciones.",
-      features: [
-        "Conceptualización de proyectos",
-        "Diseño de espacios interiores y exteriores",
-        "Modelado 3D y visualización",
-        "Planos arquitectónicos detallados",
-        "Integración de tecnologías sostenibles",
-      ],
-      image: "../../1.jpg",
-    },
-    {
-      id: 2,
-      title: "Planificación Urbana",
-      description: "Desarrollamos planes para revitalizar áreas urbanas con un enfoque futurista y sostenible.",
-      features: [
-        "Masterplans urbanos",
-        "Diseño de espacios públicos",
-        "Planificación de movilidad",
-        "Integración de áreas verdes",
-        "Estrategias de desarrollo sostenible",
-      ],
-      image: "../../00001 (2).jpg",
-    },
-    {
-      id: 3,
-      title: "Renovación",
-      description: "Transformamos espacios existentes en ambientes modernos y funcionales respetando su esencia.",
-      features: [
-        "Rehabilitación de edificios",
-        "Adaptación a nuevos usos",
-        "Mejora de eficiencia energética",
-        "Actualización de instalaciones",
-        "Preservación de elementos históricos",
-      ],
-      image: "../../04.jpg",
-    },
-    {
-      id: 4,
-      title: "Consultoría",
-      description: "Asesoramos proyectos arquitectónicos con visión innovadora y sostenible para optimizar resultados.",
-      features: [
-        "Evaluación de viabilidad",
-        "Asesoría técnica especializada",
-        "Optimización de diseños",
-        "Consultoría en sostenibilidad",
-        "Gestión de proyectos arquitectónicos",
-      ],
-      image: "../../Fachada+VIVIENDACORDERO (1).jpg",
-    },
-    {
-      id: 5,
-      title: "Diseño Interior",
-      description:
-        "Creamos espacios interiores que reflejan la identidad del cliente con un enfoque futurista y funcional.",
-      features: [
-        "Diseño conceptual de interiores",
-        "Selección de materiales y acabados",
-        "Diseño de mobiliario personalizado",
-        "Iluminación arquitectónica",
-        "Integración de tecnología smart home",
-      ],
-      image: "../../H02 (2).jpg",
-    },
-    {
-      id: 6,
-      title: "Arquitectura Sostenible",
-      description: "Desarrollamos proyectos que minimizan el impacto ambiental y maximizan la eficiencia energética.",
-      features: [
-        "Diseño bioclimático",
-        "Integración de energías renovables",
-        "Sistemas de gestión de agua",
-        "Selección de materiales sostenibles",
-        "Certificaciones ambientales (LEED, BREEAM)",
-      ],
-      image: "../../HHHH.jpg",
-    },
-  ]
-
   return (
     <main>
       <PageHeader
@@ -101,10 +18,12 @@ export default function ServiciosPage() {
         <div className="container px-4 md:px-6">
           <div className="mb-12">
             <div className="mb-4 h-px w-24 bg-white/30" />
-            <h2 className="text-3xl font-bold md:text-4xl">Servicios Principales</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Servicios Principales
+            </h2>
             <p className="mt-4 max-w-2xl text-white/70">
-              Ofrecemos una gama completa de servicios arquitectónicos con un enfoque futurista y geométrico para
-              transformar espacios.
+              Ofrecemos una gama completa de servicios arquitectónicos con un
+              enfoque futurista y geométrico para transformar espacios.
             </p>
           </div>
 
@@ -141,7 +60,11 @@ export default function ServiciosPage() {
         >
           <div className="container px-4 md:px-6">
             <div className="grid gap-12 md:grid-cols-2">
-              <div className={`order-2 ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}>
+              <div
+                className={`order-2 ${
+                  index % 2 === 0 ? "md:order-1" : "md:order-2"
+                }`}
+              >
                 <div className="relative">
                   <div className="relative h-[400px] overflow-hidden border border-white/20 p-2">
                     <Image
@@ -153,25 +76,57 @@ export default function ServiciosPage() {
                     />
                   </div>
                   <div
-                    className={`absolute -bottom-4 -right-4 h-24 w-24 border-2 ${index % 2 === 0 ? "border-black" : "border-white"}`}
+                    className={`absolute -bottom-4 -right-4 h-24 w-24 border-2 ${
+                      index % 2 === 0 ? "border-black" : "border-white"
+                    }`}
                   />
                 </div>
               </div>
-              <div className={`order-1 flex flex-col justify-center ${index % 2 === 0 ? "md:order-2" : "md:order-1"}`}>
-                <div className={`inline-block border-2 p-1 mb-4 ${index % 2 === 0 ? "border-black" : "border-white"}`}>
+              <div
+                className={`order-1 flex flex-col justify-center ${
+                  index % 2 === 0 ? "md:order-2" : "md:order-1"
+                }`}
+              >
+                <div
+                  className={`inline-block border-2 p-1 mb-4 ${
+                    index % 2 === 0 ? "border-black" : "border-white"
+                  }`}
+                >
                   <span
-                    className={`px-3 py-1 text-xs ${index % 2 === 0 ? "bg-black text-white" : "bg-white text-black"}`}
+                    className={`px-3 py-1 text-xs ${
+                      index % 2 === 0
+                        ? "bg-black text-white"
+                        : "bg-white text-black"
+                    }`}
                   >
                     SERVICIO ESPECIALIZADO
                   </span>
                 </div>
-                <h2 className="text-3xl font-bold md:text-4xl">{servicio.title}</h2>
-                <p className={`mt-4 ${index % 2 === 0 ? "text-black/70" : "text-white/70"}`}>{servicio.description}</p>
+                <h2 className="text-3xl font-bold md:text-4xl">
+                  {servicio.title}
+                </h2>
+                <p
+                  className={`mt-4 ${
+                    index % 2 === 0 ? "text-black/70" : "text-white/70"
+                  }`}
+                >
+                  {servicio.description}
+                </p>
                 <ul className="mt-6 space-y-3">
                   {servicio.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <Check className={`h-5 w-5 shrink-0 ${index % 2 === 0 ? "text-black" : "text-white"}`} />
-                      <span className={index % 2 === 0 ? "text-black/70" : "text-white/70"}>{feature}</span>
+                      <Check
+                        className={`h-5 w-5 shrink-0 ${
+                          index % 2 === 0 ? "text-black" : "text-white"
+                        }`}
+                      />
+                      <span
+                        className={
+                          index % 2 === 0 ? "text-black/70" : "text-white/70"
+                        }
+                      >
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -201,7 +156,8 @@ export default function ServiciosPage() {
             <div className="mx-auto mb-4 h-px w-24 bg-black/30" />
             <h2 className="text-3xl font-bold md:text-4xl">Nuestro Proceso</h2>
             <p className="mx-auto mt-4 max-w-2xl text-black/70">
-              Metodología de trabajo estructurada para garantizar resultados excepcionales en cada proyecto.
+              Metodología de trabajo estructurada para garantizar resultados
+              excepcionales en cada proyecto.
             </p>
           </div>
 
@@ -210,7 +166,8 @@ export default function ServiciosPage() {
               {
                 step: "01",
                 title: "Conceptualización",
-                description: "Analizamos tus necesidades y desarrollamos conceptos iniciales que reflejen tu visión.",
+                description:
+                  "Analizamos tus necesidades y desarrollamos conceptos iniciales que reflejen tu visión.",
               },
               {
                 step: "02",
@@ -221,7 +178,8 @@ export default function ServiciosPage() {
               {
                 step: "03",
                 title: "Desarrollo",
-                description: "Elaboramos documentación técnica completa y gestionamos permisos para la ejecución.",
+                description:
+                  "Elaboramos documentación técnica completa y gestionamos permisos para la ejecución.",
               },
               {
                 step: "04",
@@ -251,10 +209,13 @@ export default function ServiciosPage() {
           <div className="border border-white/20 bg-white/5 p-8 backdrop-blur-sm md:p-12">
             <div className="grid gap-8 md:grid-cols-2 md:gap-12">
               <div>
-                <h2 className="text-3xl font-bold md:text-4xl">¿Listo para transformar tu espacio?</h2>
+                <h2 className="text-3xl font-bold md:text-4xl">
+                  ¿Listo para transformar tu espacio?
+                </h2>
                 <p className="mt-4 text-white/70">
-                  Contáctanos hoy para discutir cómo podemos ayudarte a crear espacios futuristas y funcionales que
-                  superen tus expectativas.
+                  Contáctanos hoy para discutir cómo podemos ayudarte a crear
+                  espacios futuristas y funcionales que superen tus
+                  expectativas.
                 </p>
               </div>
               <div className="flex flex-col items-start justify-center space-y-4">
@@ -277,6 +238,5 @@ export default function ServiciosPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
-

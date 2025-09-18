@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { MapPin, Mail, Phone, Clock, Send } from "lucide-react"
-import { useState } from "react"
+import { MapPin, Mail, Phone, Clock, Send } from "lucide-react";
+import { useState } from "react";
 
-import PageHeader from "@/components/page-header"
+import PageHeader from "@/components/page-header";
+import { faq } from "@/lib/data";
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -15,18 +16,24 @@ export default function ContactoPage() {
     asunto: "",
     mensaje: "",
     tipo: "consulta",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Aquí iría la lógica para enviar el formulario
-    console.log(formData)
-    alert("Mensaje enviado con éxito. Nos pondremos en contacto contigo pronto.")
+    console.log(formData);
+    alert(
+      "Mensaje enviado con éxito. Nos pondremos en contacto contigo pronto."
+    );
     setFormData({
       nombre: "",
       email: "",
@@ -34,8 +41,8 @@ export default function ContactoPage() {
       asunto: "",
       mensaje: "",
       tipo: "consulta",
-    })
-  }
+    });
+  };
 
   return (
     <main>
@@ -51,10 +58,13 @@ export default function ContactoPage() {
             <div>
               <div className="mb-8">
                 <div className="mb-4 h-px w-24 bg-white/30" />
-                <h2 className="text-3xl font-bold md:text-4xl">Ponte en contacto</h2>
+                <h2 className="text-3xl font-bold md:text-4xl">
+                  Ponte en contacto
+                </h2>
                 <p className="mt-4 max-w-md text-white/70">
-                  Estamos aquí para responder tus preguntas y ayudarte a transformar tus espacios con nuestro enfoque
-                  futurista y geométrico.
+                  Estamos aquí para responder tus preguntas y ayudarte a
+                  transformar tus espacios con nuestro enfoque futurista y
+                  geométrico.
                 </p>
               </div>
 
@@ -66,7 +76,8 @@ export default function ContactoPage() {
                   <div>
                     <div className="font-medium">Dirección</div>
                     <div className="text-white/70">
-                      Calle Principal #123, San Pedro de Macorís, República Dominicana
+                      Calle Principal #123, San Pedro de Macorís, República
+                      Dominicana
                     </div>
                   </div>
                 </div>
@@ -85,7 +96,9 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <div className="font-medium">Email</div>
-                    <div className="text-white/70">info@cuadroarquitectura.com</div>
+                    <div className="text-white/70">
+                      info@cuadroarquitectura.com
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -94,8 +107,12 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <div className="font-medium">Horario</div>
-                    <div className="text-white/70">Lunes a Viernes: 9:00 AM - 6:00 PM</div>
-                    <div className="text-white/70">Sábados: 9:00 AM - 1:00 PM</div>
+                    <div className="text-white/70">
+                      Lunes a Viernes: 9:00 AM - 6:00 PM
+                    </div>
+                    <div className="text-white/70">
+                      Sábados: 9:00 AM - 1:00 PM
+                    </div>
                   </div>
                 </div>
               </div>
@@ -103,16 +120,18 @@ export default function ContactoPage() {
               <div className="mt-12">
                 <h3 className="mb-4 text-xl font-bold">Síguenos</h3>
                 <div className="flex space-x-4">
-                  {["facebook", "twitter", "instagram", "linkedin"].map((social) => (
-                    <a
-                      key={social}
-                      href="#"
-                      className="grid h-10 w-10 place-items-center border border-white/20 bg-white/5 transition-colors hover:border-white/40 hover:bg-white/10"
-                    >
-                      <span className="sr-only">{social}</span>
-                      <div className="h-5 w-5"></div>
-                    </a>
-                  ))}
+                  {["facebook", "twitter", "instagram", "linkedin"].map(
+                    (social) => (
+                      <a
+                        key={social}
+                        href="#"
+                        className="grid h-10 w-10 place-items-center border border-white/20 bg-white/5 transition-colors hover:border-white/40 hover:bg-white/10"
+                      >
+                        <span className="sr-only">{social}</span>
+                        <div className="h-5 w-5"></div>
+                      </a>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -243,7 +262,8 @@ export default function ContactoPage() {
             <div className="mx-auto mb-4 h-px w-24 bg-black/30" />
             <h2 className="text-3xl font-bold md:text-4xl">Encuéntranos</h2>
             <p className="mx-auto mt-4 max-w-2xl text-black/70">
-              Visita nuestras oficinas en San Pedro de Macorís para conocer más sobre nuestros proyectos y servicios.
+              Visita nuestras oficinas en San Pedro de Macorís para conocer más
+              sobre nuestros proyectos y servicios.
             </p>
           </div>
 
@@ -251,7 +271,9 @@ export default function ContactoPage() {
             <div className="aspect-[16/9] w-full bg-black/5">
               {/* Aquí iría un mapa interactivo */}
               <div className="flex h-full w-full items-center justify-center">
-                <p className="text-black/70">Mapa de ubicación - San Pedro de Macorís, República Dominicana</p>
+                <p className="text-black/70">
+                  Mapa de ubicación - San Pedro de Macorís, República Dominicana
+                </p>
               </div>
             </div>
           </div>
@@ -263,46 +285,21 @@ export default function ContactoPage() {
         <div className="container px-4 md:px-6">
           <div className="mb-12">
             <div className="mb-4 h-px w-24 bg-white/30" />
-            <h2 className="text-3xl font-bold md:text-4xl">Preguntas Frecuentes</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Preguntas Frecuentes
+            </h2>
             <p className="mt-4 max-w-2xl text-white/70">
-              Respuestas a las preguntas más comunes sobre nuestros servicios y proceso de trabajo.
+              Respuestas a las preguntas más comunes sobre nuestros servicios y
+              proceso de trabajo.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {[
-              {
-                question: "¿Cuál es el proceso para iniciar un proyecto con Cuadro Arquitectura?",
-                answer:
-                  "El proceso comienza con una consulta inicial donde discutimos tus necesidades y visión. Luego, desarrollamos un concepto preliminar y, una vez aprobado, avanzamos con el diseño detallado y la implementación.",
-              },
-              {
-                question: "¿Trabajan en proyectos fuera de San Pedro de Macorís?",
-                answer:
-                  "Sí, aunque nuestro enfoque principal es la transformación de San Pedro de Macorís, también trabajamos en proyectos en otras localidades de República Dominicana y el Caribe.",
-              },
-              {
-                question: "¿Cuánto tiempo toma completar un proyecto arquitectónico?",
-                answer:
-                  "El tiempo varía según la complejidad y escala del proyecto. Un proyecto residencial puede tomar de 3 a 6 meses en la fase de diseño, mientras que proyectos más grandes pueden requerir más tiempo.",
-              },
-              {
-                question: "¿Ofrecen servicios de supervisión durante la construcción?",
-                answer:
-                  "Sí, ofrecemos servicios completos que incluyen supervisión durante la fase de construcción para garantizar que el proyecto se ejecute según las especificaciones de diseño.",
-              },
-              {
-                question: "¿Cómo incorporan la sostenibilidad en sus diseños?",
-                answer:
-                  "Integramos principios de sostenibilidad desde la fase conceptual, considerando orientación solar, ventilación natural, eficiencia energética y selección de materiales sostenibles.",
-              },
-              {
-                question: "¿Tienen un estilo arquitectónico definido?",
-                answer:
-                  "Nuestro estilo se caracteriza por diseños futuristas con elementos geométricos cuadrados, pero adaptamos nuestro enfoque según las necesidades específicas de cada cliente y proyecto.",
-              },
-            ].map((faq, index) => (
-              <div key={index} className="border border-white/20 bg-white/5 p-6 backdrop-blur-sm">
+            {faq.map((faq, index) => (
+              <div
+                key={index}
+                className="border border-white/20 bg-white/5 p-6 backdrop-blur-sm"
+              >
                 <h3 className="mb-3 text-lg font-bold">{faq.question}</h3>
                 <p className="text-white/70">{faq.answer}</p>
               </div>
@@ -311,6 +308,5 @@ export default function ContactoPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
-

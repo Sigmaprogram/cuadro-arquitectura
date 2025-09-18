@@ -1,6 +1,6 @@
-import { ChevronRight } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,17 +20,20 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 md:gap-12">
             <div className="flex flex-col justify-center space-y-6">
               <div className="border-2 border-white p-1">
-                <span className="bg-white px-3 py-1 text-xs text-black flex">INNOVACIÓN ARQUITECTÓNICA</span>
+                <span className="bg-white px-3 py-1 text-xs text-black flex">
+                  INNOVACIÓN ARQUITECTÓNICA
+                </span>
               </div>
               <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-                Transformando <br />
+                Arquitectura <br />
                 <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                  San Pedro de Macorís
+                  moderna, hecha a tu medida.
                 </span>
               </h1>
               <p className="max-w-md text-white/70">
-                Diseñamos espacios que combinan estética futurista con funcionalidad, creando ambientes que transforman
-                la experiencia urbana.
+                Diseñamos espacios que combinan estética futurista con
+                funcionalidad, creando ambientes que transforman la experiencia
+                urbana.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -97,7 +100,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="mb-12 text-center">
             <div className="mx-auto mb-4 h-px w-24 bg-black/30" />
-            <h2 className="text-3xl font-bold md:text-4xl">Nuestros Servicios</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Nuestros Servicios
+            </h2>
             <p className="mt-4 mx-auto max-w-2xl text-black/70">
               Soluciones arquitectónicas innovadoras para transformar espacios
             </p>
@@ -106,27 +111,33 @@ export default function Home() {
             {[
               {
                 title: "Diseño Arquitectónico",
-                description: "Creamos diseños vanguardistas que combinan estética y funcionalidad.",
+                description:
+                  "Creamos diseños vanguardistas que combinan estética y funcionalidad.",
               },
               {
                 title: "Planificación Urbana",
-                description: "Desarrollamos planes para revitalizar áreas urbanas con un enfoque futurista.",
+                description:
+                  "Desarrollamos planes para revitalizar áreas urbanas con un enfoque futurista.",
               },
               {
                 title: "Renovación",
-                description: "Transformamos espacios existentes en ambientes modernos y funcionales.",
+                description:
+                  "Transformamos espacios existentes en ambientes modernos y funcionales.",
               },
               {
                 title: "Consultoría",
-                description: "Asesoramos proyectos arquitectónicos con visión innovadora y sostenible.",
+                description:
+                  "Asesoramos proyectos arquitectónicos con visión innovadora y sostenible.",
               },
               {
                 title: "Diseño Interior",
-                description: "Creamos espacios interiores que reflejan la identidad del cliente.",
+                description:
+                  "Creamos espacios interiores que reflejan la identidad del cliente.",
               },
               {
                 title: "Arquitectura Sostenible",
-                description: "Desarrollamos proyectos que minimizan el impacto ambiental.",
+                description:
+                  "Desarrollamos proyectos que minimizan el impacto ambiental.",
               },
             ].map((service, index) => (
               <div
@@ -165,7 +176,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="mb-12 text-center">
             <div className="mx-auto mb-4 h-px w-24 bg-white/30" />
-            <h2 className="text-3xl font-bold md:text-4xl">Proyectos Destacados</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Proyectos Destacados
+            </h2>
             <p className="mt-4 mx-auto max-w-2xl text-white/70">
               Transformando San Pedro de Macorís con arquitectura innovadora
             </p>
@@ -179,10 +192,15 @@ export default function Home() {
               "Parque Tecnológico",
               "Biblioteca Municipal",
             ].map((project, index) => (
-              <div key={index} className="group overflow-hidden border border-white/20 bg-white/5 backdrop-blur-sm">
+              <div
+                key={index}
+                className="group overflow-hidden border border-white/20 bg-white/5 backdrop-blur-sm"
+              >
                 <div className="relative aspect-square overflow-hidden">
                   <Image
-                    src={`/placeholder.svg?height=500&width=500&text=${encodeURIComponent(project)}`}
+                    src={`/placeholder.svg?height=500&width=500&text=${encodeURIComponent(
+                      project
+                    )}`}
                     alt={project}
                     width={500}
                     height={500}
@@ -192,7 +210,9 @@ export default function Home() {
                 <div className="border-t border-white/20 p-4">
                   <h3 className="text-xl font-bold">{project}</h3>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="text-sm text-white/60">San Pedro de Macorís</span>
+                    <span className="text-sm text-white/60">
+                      San Pedro de Macorís
+                    </span>
                     <Link
                       href="/proyectos"
                       className="group inline-flex items-center gap-1 text-sm font-medium text-white"
@@ -218,7 +238,10 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="sobre-nosotros" className="relative bg-white py-24 text-black">
+      <section
+        id="sobre-nosotros"
+        className="relative bg-white py-24 text-black"
+      >
         <div className="container px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2">
             <div className="relative h-[400px] md:h-auto">
@@ -235,19 +258,26 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center">
               <div className="inline-block border-2 border-black p-1">
-                <span className="bg-black px-3 py-1 text-xs text-white flex">NUESTRA MISIÓN</span>
+                <span className="bg-black px-3 py-1 text-xs text-white flex">
+                  NUESTRA MISIÓN
+                </span>
               </div>
-              <h2 className="mt-6 text-3xl font-bold md:text-4xl">Transformando espacios, creando futuro</h2>
+              <h2 className="mt-6 text-3xl font-bold md:text-4xl">
+                Transformando espacios, creando futuro
+              </h2>
               <div className="mt-6 space-y-4 text-black/70">
                 <p>
-                  En Cuadro Arquitectura, nos dedicamos a transformar la provincia de San Pedro de Macorís a través de
-                  la innovación arquitectónica. Nuestra filosofía se basa en la fusión de diseños futuristas con
-                  elementos geométricos cuadrados, creando espacios únicos y funcionales.
+                  En Cuadro Arquitectura, nos dedicamos a transformar la
+                  provincia de San Pedro de Macorís a través de la innovación
+                  arquitectónica. Nuestra filosofía se basa en la fusión de
+                  diseños futuristas con elementos geométricos cuadrados,
+                  creando espacios únicos y funcionales.
                 </p>
                 <p>
-                  Fundada con la visión de redefinir el paisaje urbano, nuestro equipo de arquitectos combina
-                  creatividad y precisión técnica para desarrollar proyectos que elevan la calidad de vida y promueven
-                  el desarrollo sostenible de la región.
+                  Fundada con la visión de redefinir el paisaje urbano, nuestro
+                  equipo de arquitectos combina creatividad y precisión técnica
+                  para desarrollar proyectos que elevan la calidad de vida y
+                  promueven el desarrollo sostenible de la región.
                 </p>
               </div>
               <div className="mt-8 grid grid-cols-2 gap-4 border-t border-black/10 pt-8">
@@ -280,10 +310,12 @@ export default function Home() {
           <div className="border border-white/20 bg-white/5 p-8 backdrop-blur-sm md:p-12">
             <div className="grid gap-8 md:grid-cols-2 md:gap-12">
               <div>
-                <h2 className="text-3xl font-bold md:text-4xl">¿Tienes un proyecto en mente?</h2>
+                <h2 className="text-3xl font-bold md:text-4xl">
+                  ¿Tienes un proyecto en mente?
+                </h2>
                 <p className="mt-4 text-white/70">
-                  Estamos listos para transformar tus ideas en realidad. Contáctanos para comenzar tu proyecto
-                  arquitectónico.
+                  Estamos listos para transformar tus ideas en realidad.
+                  Contáctanos para comenzar tu proyecto arquitectónico.
                 </p>
               </div>
               <div className="flex flex-col items-start justify-center space-y-4">
@@ -306,6 +338,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
-

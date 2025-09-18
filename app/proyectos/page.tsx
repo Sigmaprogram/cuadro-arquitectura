@@ -1,106 +1,13 @@
-import { ChevronRight, MapPin } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { ChevronRight, MapPin } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import PageHeader from "@/components/page-header"
+import PageHeader from "@/components/page-header";
+import { proyectos } from "@/lib/data";
 
 export default function ProyectosPage() {
-  // Datos de ejemplo para proyectos
-  const proyectos = [
-    {
-      id: 1,
-      title: "Centro Cultural Moderno",
-      category: "Cultural",
-      location: "Centro de San Pedro de Macorís",
-      year: "2023",
-      description:
-        "Un espacio cultural vanguardista que combina áreas de exposición, auditorio y talleres creativos con una estética futurista y geométrica.",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "Complejo Residencial Futurista",
-      category: "Residencial",
-      location: "Zona Este, San Pedro de Macorís",
-      year: "2022",
-      description:
-        "Conjunto de viviendas que integra tecnología, sostenibilidad y diseño cuadrado para crear espacios habitacionales del futuro.",
-      featured: true,
-    },
-    {
-      id: 3,
-      title: "Renovación Plaza Central",
-      category: "Urbanismo",
-      location: "Plaza Central, San Pedro de Macorís",
-      year: "2021",
-      description:
-        "Rediseño del espacio público central con elementos geométricos, áreas verdes y zonas de interacción social.",
-      featured: true,
-    },
-    {
-      id: 4,
-      title: "Torre Corporativa Cuadro",
-      category: "Comercial",
-      location: "Distrito Financiero, San Pedro de Macorís",
-      year: "2023",
-      description:
-        "Edificio de oficinas con fachada modular cuadrada que optimiza la luz natural y crea espacios de trabajo inspiradores.",
-      featured: true,
-    },
-    {
-      id: 5,
-      title: "Parque Tecnológico",
-      category: "Institucional",
-      location: "Periferia Norte, San Pedro de Macorís",
-      year: "2022",
-      description:
-        "Complejo de edificios para empresas tecnológicas con diseño modular y espacios colaborativos integrados con la naturaleza.",
-      featured: true,
-    },
-    {
-      id: 6,
-      title: "Biblioteca Municipal",
-      category: "Educativo",
-      location: "Distrito Cultural, San Pedro de Macorís",
-      year: "2021",
-      description:
-        "Centro de conocimiento con arquitectura futurista que combina espacios de lectura, investigación y áreas digitales.",
-      featured: true,
-    },
-    {
-      id: 7,
-      title: "Hotel Cuadrado",
-      category: "Hospitalidad",
-      location: "Zona Turística, San Pedro de Macorís",
-      year: "2023",
-      description:
-        "Hotel boutique con diseño minimalista y cuadrado que ofrece una experiencia única para los visitantes.",
-      featured: false,
-    },
-    {
-      id: 8,
-      title: "Centro Deportivo Geométrico",
-      category: "Deportivo",
-      location: "Complejo Deportivo, San Pedro de Macorís",
-      year: "2022",
-      description:
-        "Instalaciones deportivas con arquitectura angular que optimiza los espacios para diversas disciplinas.",
-      featured: false,
-    },
-    {
-      id: 9,
-      title: "Centro Comercial Modular",
-      category: "Comercial",
-      location: "Avenida Principal, San Pedro de Macorís",
-      year: "2021",
-      description:
-        "Espacio comercial con diseño modular que permite adaptabilidad y crecimiento según las necesidades.",
-      featured: false,
-    },
-  ]
-
   // Categorías únicas para el filtro
-  const categories = Array.from(new Set(proyectos.map((p) => p.category)))
+  const categories = Array.from(new Set(proyectos.map((p) => p.category)));
 
   return (
     <main>
@@ -114,9 +21,12 @@ export default function ProyectosPage() {
         <div className="container px-4 md:px-6">
           <div className="mb-12">
             <div className="mb-4 h-px w-24 bg-white/30" />
-            <h2 className="text-3xl font-bold md:text-4xl">Proyectos Destacados</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Proyectos Destacados
+            </h2>
             <p className="mt-4 max-w-2xl text-white/70">
-              Nuestras obras más emblemáticas que están transformando el paisaje urbano de San Pedro de Macorís.
+              Nuestras obras más emblemáticas que están transformando el paisaje
+              urbano de San Pedro de Macorís.
             </p>
           </div>
 
@@ -130,14 +40,18 @@ export default function ProyectosPage() {
                 >
                   <div className="relative aspect-square overflow-hidden">
                     <Image
-                      src={`/placeholder.svg?height=500&width=500&text=${encodeURIComponent(proyecto.title)}`}
+                      src={`/placeholder.svg?height=500&width=500&text=${encodeURIComponent(
+                        proyecto.title
+                      )}`}
                       alt={proyecto.title}
                       width={500}
                       height={500}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute bottom-0 left-0 bg-black/70 p-2 backdrop-blur-sm">
-                      <span className="text-xs font-medium">{proyecto.category}</span>
+                      <span className="text-xs font-medium">
+                        {proyecto.category}
+                      </span>
                     </div>
                   </div>
                   <div className="border-t border-white/20 p-6">
@@ -145,10 +59,14 @@ export default function ProyectosPage() {
                     <p className="mt-2 text-white/70">{proyecto.description}</p>
                     <div className="mt-4 flex items-center gap-2">
                       <MapPin className="h-4 w-4 text-white/60" />
-                      <span className="text-sm text-white/60">{proyecto.location}</span>
+                      <span className="text-sm text-white/60">
+                        {proyecto.location}
+                      </span>
                     </div>
                     <div className="mt-6 flex justify-between">
-                      <span className="text-sm text-white/60">{proyecto.year}</span>
+                      <span className="text-sm text-white/60">
+                        {proyecto.year}
+                      </span>
                       <Link
                         href={`/proyectos/${proyecto.id}`}
                         className="group inline-flex items-center gap-1 text-sm font-medium text-white"
@@ -169,9 +87,12 @@ export default function ProyectosPage() {
         <div className="container px-4 md:px-6">
           <div className="mb-12">
             <div className="mb-4 h-px w-24 bg-black/30" />
-            <h2 className="text-3xl font-bold md:text-4xl">Todos los Proyectos</h2>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Todos los Proyectos
+            </h2>
             <p className="mt-4 max-w-2xl text-black/70">
-              Explore nuestra colección completa de proyectos arquitectónicos en San Pedro de Macorís.
+              Explore nuestra colección completa de proyectos arquitectónicos en
+              San Pedro de Macorís.
             </p>
           </div>
 
@@ -199,24 +120,32 @@ export default function ProyectosPage() {
               >
                 <div className="relative aspect-video overflow-hidden">
                   <Image
-                    src={`/placeholder.svg?height=400&width=600&text=${encodeURIComponent(proyecto.title)}`}
+                    src={`/placeholder.svg?height=400&width=600&text=${encodeURIComponent(
+                      proyecto.title
+                    )}`}
                     alt={proyecto.title}
                     width={600}
                     height={400}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute bottom-0 left-0 bg-white/70 p-2 backdrop-blur-sm">
-                    <span className="text-xs font-medium text-black">{proyecto.category}</span>
+                    <span className="text-xs font-medium text-black">
+                      {proyecto.category}
+                    </span>
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold">{proyecto.title}</h3>
                   <div className="mt-2 flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-black/60" />
-                    <span className="text-sm text-black/60">{proyecto.location}</span>
+                    <span className="text-sm text-black/60">
+                      {proyecto.location}
+                    </span>
                   </div>
                   <div className="mt-4 flex justify-between">
-                    <span className="text-sm text-black/60">{proyecto.year}</span>
+                    <span className="text-sm text-black/60">
+                      {proyecto.year}
+                    </span>
                     <Link
                       href={`/proyectos/${proyecto.id}`}
                       className="group inline-flex items-center gap-1 text-sm font-medium text-black"
@@ -238,10 +167,13 @@ export default function ProyectosPage() {
           <div className="border border-white/20 bg-white/5 p-8 backdrop-blur-sm md:p-12">
             <div className="grid gap-8 md:grid-cols-2 md:gap-12">
               <div>
-                <h2 className="text-3xl font-bold md:text-4xl">¿Tienes un proyecto en mente?</h2>
+                <h2 className="text-3xl font-bold md:text-4xl">
+                  ¿Tienes un proyecto en mente?
+                </h2>
                 <p className="mt-4 text-white/70">
-                  Estamos listos para transformar tus ideas en realidad. Nuestro equipo de arquitectos está preparado
-                  para crear espacios futuristas y funcionales que superen tus expectativas.
+                  Estamos listos para transformar tus ideas en realidad. Nuestro
+                  equipo de arquitectos está preparado para crear espacios
+                  futuristas y funcionales que superen tus expectativas.
                 </p>
               </div>
               <div className="flex flex-col items-start justify-center space-y-4">
@@ -264,5 +196,5 @@ export default function ProyectosPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

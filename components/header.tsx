@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { Menu } from "lucide-react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { Menu } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Header() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { name: "Inicio", path: "/" },
@@ -17,11 +17,11 @@ export default function Header() {
     { name: "Servicios", path: "/servicios" },
     { name: "Sobre Nosotros", path: "/sobre-nosotros" },
     { name: "Contacto", path: "/contacto" },
-  ]
+  ];
 
   const isActive = (path: string) => {
-    return pathname === path
-  }
+    return pathname === path;
+  };
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-sm">
@@ -29,7 +29,9 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="h-8 w-8 border-2 border-white bg-transparent" />
-            <span className="text-xl font-light tracking-wider">CUADRO ARQUITECTURA</span>
+            <span className="text-xl font-light tracking-wider">
+              CUADRO ARQUITECTURA
+            </span>
           </Link>
         </div>
         <nav className="hidden md:flex">
@@ -55,8 +57,15 @@ export default function Header() {
               <Menu className="h-5 w-5" />
             </button>
           </SheetTrigger>
-          <SheetContent side="left" className="border-r border-white/10 bg-black text-white">
-            <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+          <SheetContent
+            side="left"
+            className="border-r border-white/10 bg-black text-white"
+          >
+            <Link
+              href="/"
+              className="flex items-center gap-2"
+              onClick={() => setIsOpen(false)}
+            >
               <div className="h-8 w-8 border-2 border-white bg-transparent" />
               <span className="text-xl font-light tracking-wider">CUADRO</span>
             </Link>
@@ -78,6 +87,5 @@ export default function Header() {
         </Sheet>
       </div>
     </header>
-  )
+  );
 }
-
