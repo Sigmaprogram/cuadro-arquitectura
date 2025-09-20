@@ -55,7 +55,7 @@ export default function Home() {
               <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-4">
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="../../00001.jpg"
+                    src="/00001.jpg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
@@ -64,7 +64,7 @@ export default function Home() {
                 </div>
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="../../01+(2) (1).jpeg"
+                    src="/01+(2) (1).jpeg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
@@ -73,7 +73,7 @@ export default function Home() {
                 </div>
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="../../R2.jpg"
+                    src="/R2.jpg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
                 <div className="h-full w-full overflow-hidden border border-white/20 bg-white/5 p-1 backdrop-blur-sm">
                   <Image
-                    src="../../00.jpg"
+                    src="/00.jpg"
                     alt="Proyecto arquitectónico"
                     width={300}
                     height={300}
